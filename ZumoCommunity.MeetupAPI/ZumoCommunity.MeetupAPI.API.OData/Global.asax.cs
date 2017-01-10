@@ -27,8 +27,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-			var dataContextTask = Factory.GetDataContextAsync();
-			Task.Run(() => dataContextTask);
+			var dataContextTask = Task.Run(Factory.GetDataContextAsync);
 			dataContextTask.Result.Database.Initialize(false);
 		}
 
