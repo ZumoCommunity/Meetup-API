@@ -10,7 +10,7 @@ using ZumoCommunity.MeetupAPI.API.OData.Helpers;
 using ZumoCommunity.MeetupAPI.Data.Context;
 using ZumoCommunity.MeetupAPI.Data.Entity;
 
-namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData
+namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 {
 	public abstract class _Controller<T> : ODataController where T : _Data
 	{
