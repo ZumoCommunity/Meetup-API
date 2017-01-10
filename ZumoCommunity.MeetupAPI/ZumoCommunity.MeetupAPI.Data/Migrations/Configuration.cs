@@ -1,11 +1,9 @@
+using System.Data.Entity.Migrations;
+using ZumoCommunity.MeetupAPI.Data.Context;
+
 namespace ZumoCommunity.MeetupAPI.Data.Migrations
 {
-	using System;
-	using System.Data.Entity;
-	using System.Data.Entity.Migrations;
-	using System.Linq;
-
-	internal sealed class Configuration : DbMigrationsConfiguration<ZumoCommunity.MeetupAPI.Data.Context.DataContext>
+	internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
 	{
 		public Configuration()
 		{
@@ -13,7 +11,7 @@ namespace ZumoCommunity.MeetupAPI.Data.Migrations
 			AutomaticMigrationDataLossAllowed = false;
 		}
 
-		protected override void Seed(ZumoCommunity.MeetupAPI.Data.Context.DataContext context)
+		protected override void Seed(DataContext context)
 		{
 			//  This method will be called after migrating to the latest version.
 

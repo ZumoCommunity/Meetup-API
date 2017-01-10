@@ -5,6 +5,7 @@ using System.Web.Http;
 using System.Web.Routing;
 using ZumoCommunity.ConfigurationAPI.Provider;
 using ZumoCommunity.ConfigurationAPI.Readers.Common;
+using ZumoCommunity.MeetupAPI.API.OData.Helpers;
 
 namespace ZumoCommunity.MeetupAPI.API.OData
 {
@@ -25,6 +26,10 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+			var dataContextTask = Factory.GetDataContextAsync();
+			Task.Run(() => dataContextTask);
+			dataContextTask.Result.Database.Initialize(false);
 		}
 
 		protected void Session_Start(object sender, EventArgs e)
