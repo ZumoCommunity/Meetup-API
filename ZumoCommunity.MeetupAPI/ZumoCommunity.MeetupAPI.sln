@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZumoCommunity.MeetupAPI.Infrastructure", "ZumoCommunity.MeetupAPI.Infrastructure\ZumoCommunity.MeetupAPI.Infrastructure.csproj", "{98FF3401-30B7-45AA-AAC3-E6D61F38C4D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZumoCommunity.MeetupAPI.API.OData", "ZumoCommunity.MeetupAPI.API.OData\ZumoCommunity.MeetupAPI.API.OData.csproj", "{1356B032-2C97-4CD2-A017-E1B7610EF3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZumoCommunity.MeetupAPI.Data", "ZumoCommunity.MeetupAPI.Data\ZumoCommunity.MeetupAPI.Data.csproj", "{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ZumoCommunity.MeetupAPI.ResourceGroup", "ZumoCommunity.MeetupAPI.ResourceGroup\ZumoCommunity.MeetupAPI.ResourceGroup.deployproj", "{0AA195A9-D267-431F-8006-3C81BD1FECF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98FF3401-30B7-45AA-AAC3-E6D61F38C4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FF3401-30B7-45AA-AAC3-E6D61F38C4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FF3401-30B7-45AA-AAC3-E6D61F38C4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FF3401-30B7-45AA-AAC3-E6D61F38C4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1356B032-2C97-4CD2-A017-E1B7610EF3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1356B032-2C97-4CD2-A017-E1B7610EF3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1356B032-2C97-4CD2-A017-E1B7610EF3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1356B032-2C97-4CD2-A017-E1B7610EF3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
