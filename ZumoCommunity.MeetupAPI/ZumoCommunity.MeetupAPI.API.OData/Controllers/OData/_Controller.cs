@@ -6,10 +6,9 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.OData;
-using System.Web.OData.Query;
+using ZumoCommunity.MeetupAPI.API.OData.Helpers;
 using ZumoCommunity.MeetupAPI.Data.Context;
 using ZumoCommunity.MeetupAPI.Data.Entity;
-using ZumoCommunity.MeetupAPI.Infrastructure.Configuration;
 
 namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData
 {
@@ -19,11 +18,11 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData
 
 		public _Controller()
 		{
-			var task = Global.ConfigurationProvider.GetConfigValueAsync(ConfigurationKeys.Database.ToKeyString());
-			task.Start();
+			var task = Factory.GetDataContextAsync();
+			Task.Run(() => task);
 			task.Wait();
 
-			db = new DataContext(task.Result);
+			db = task.Result;
 		}
 
 		// GET: odata/<name>
