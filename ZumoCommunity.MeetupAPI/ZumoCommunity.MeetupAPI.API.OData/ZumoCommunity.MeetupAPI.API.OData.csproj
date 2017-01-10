@@ -290,15 +290,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\OData\AgendaItemsController.cs" />
-    <Compile Include="Controllers\OData\PartnersController.cs" />
-    <Compile Include="Controllers\OData\LocationsController.cs" />
-    <Compile Include="Controllers\OData\MeetupsController.cs" />
-    <Compile Include="Controllers\OData\RegistrationsController.cs" />
-    <Compile Include="Controllers\OData\SpeakersController.cs" />
-    <Compile Include="Controllers\OData\TopicAssetsController.cs" />
-    <Compile Include="Controllers\OData\TopicsController.cs" />
-    <Compile Include="Controllers\OData\_Controller.cs" />
+    <Compile Include="Controllers\OData\v1\AgendaItemsController.cs" />
+    <Compile Include="Controllers\OData\v1\PartnersController.cs" />
+    <Compile Include="Controllers\OData\v1\LocationsController.cs" />
+    <Compile Include="Controllers\OData\v1\MeetupsController.cs" />
+    <Compile Include="Controllers\OData\v1\RegistrationsController.cs" />
+    <Compile Include="Controllers\OData\v1\SpeakersController.cs" />
+    <Compile Include="Controllers\OData\v1\TopicAssetsController.cs" />
+    <Compile Include="Controllers\OData\v1\TopicsController.cs" />
+    <Compile Include="Controllers\OData\v1\_Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
