@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using ZumoCommunity.MeetupAPI.Infrastructure.Data.Entity;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
-	public class Registration : _Data, IRegistrationData
+	public class Registration : _Data
 	{
 		public string Email { get; set; }
 

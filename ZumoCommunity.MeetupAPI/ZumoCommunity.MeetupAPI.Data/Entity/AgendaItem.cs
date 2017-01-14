@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ZumoCommunity.MeetupAPI.Infrastructure.Data.Entity;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
-	public class AgendaItem : _Data, IAgendaItemData
+	public class AgendaItem : _Data
 	{
 		[Required]
 		public Guid MeetupId { get; set; }

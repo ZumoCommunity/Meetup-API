@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ZumoCommunity.MeetupAPI.Infrastructure.Data.Entity;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
-	public class Location : _Data, ILocationData
+	public class Location : _Data
 	{
 		[Required]
 		public string Title { get; set; }
@@ -24,7 +23,7 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 
 		#region Navigation
 
-		public virtual ICollection<IMeetupData> Meetups { get; set; }
+		public virtual ICollection<Meetup> Meetups { get; set; }
 
 		#endregion
 
