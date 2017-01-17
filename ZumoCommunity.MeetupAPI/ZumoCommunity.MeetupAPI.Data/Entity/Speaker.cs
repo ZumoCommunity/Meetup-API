@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using ZumoCommunity.MeetupAPI.Infrastructure.Data.Entity;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
-	public class Speaker : _Data, ISpeakerData
+	public class Speaker : _Data
 	{
 		[Required]
 		public string FullName { get; set; }

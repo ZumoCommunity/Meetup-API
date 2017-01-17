@@ -1,6 +1,7 @@
 namespace ZumoCommunity.MeetupAPI.Data.Migrations
 {
-	using System.Data.Entity.Migrations;
+    using System;
+    using System.Data.Entity.Migrations;
     
     public partial class Initialize : DbMigration
     {

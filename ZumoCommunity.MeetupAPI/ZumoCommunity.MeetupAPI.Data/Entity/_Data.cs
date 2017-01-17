@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using ZumoCommunity.MeetupAPI.Infrastructure.Data.Entity;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
-	public abstract class _Data : IData
+	public abstract class _Data
 	{
 		[Key]
 		[Required]

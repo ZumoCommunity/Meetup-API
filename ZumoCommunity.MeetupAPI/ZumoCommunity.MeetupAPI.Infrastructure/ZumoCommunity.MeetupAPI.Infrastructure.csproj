@@ -42,19 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ConfigurationKeys.cs" />
-    <Compile Include="Data\Entity\IAgendaItemData.cs" />
-    <Compile Include="Data\Entity\ILocationData.cs" />
-    <Compile Include="Data\Entity\IPartnerData.cs" />
-    <Compile Include="Data\Entity\ITopicAssetData.cs" />
-    <Compile Include="Data\Entity\IData.cs" />
-    <Compile Include="Data\Entity\IMeetupData.cs" />
-    <Compile Include="Data\Entity\IRegistrationData.cs" />
-    <Compile Include="Data\Entity\ISpeakerData.cs" />
-    <Compile Include="Data\Entity\ITopicData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Data\Entity\ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

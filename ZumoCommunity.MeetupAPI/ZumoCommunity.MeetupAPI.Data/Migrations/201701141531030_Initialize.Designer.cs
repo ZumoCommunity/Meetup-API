@@ -13,7 +13,7 @@ namespace ZumoCommunity.MeetupAPI.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612181815239_Initialize"; }
+            get { return "201701141531030_Initialize"; }
         }
         
         string IMigrationMetadata.Source

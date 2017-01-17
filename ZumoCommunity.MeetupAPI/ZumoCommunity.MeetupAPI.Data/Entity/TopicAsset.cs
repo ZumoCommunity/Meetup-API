@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using ZumoCommunity.MeetupAPI.Infrastructure.Data.Entity;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
-	public class TopicAsset : _Data, ITopicAssetData
+	public class TopicAsset : _Data
 	{
 		public string Title { get; set; }
 

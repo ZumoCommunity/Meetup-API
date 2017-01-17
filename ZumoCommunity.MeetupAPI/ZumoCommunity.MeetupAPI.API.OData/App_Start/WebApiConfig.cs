@@ -13,7 +13,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 			var cors = new EnableCorsAttribute("*", "*", "*");
 			config.EnableCors(cors);
 
-			ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+			var builder = new ODataConventionModelBuilder();
 			config.Count().Filter().OrderBy().Expand().Select().MaxTop(null);
 
 			builder.EntitySet<AgendaItem>("AgendaItems");
@@ -25,7 +25,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 			builder.EntitySet<TopicAsset>("TopicAssets");
 			builder.EntitySet<Topic>("Topics");
 
-			config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
+			config.MapODataServiceRoute("odata", "odata/v1", builder.GetEdmModel());
 		}
 	}
 }

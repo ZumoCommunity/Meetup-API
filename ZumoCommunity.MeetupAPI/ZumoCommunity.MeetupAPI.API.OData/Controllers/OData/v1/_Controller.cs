@@ -14,29 +14,28 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 {
 	public abstract class _Controller<T> : ODataController where T : _Data
 	{
-		private DataContext db;
+		private readonly DataContext _db;
 
-		public _Controller()
+		protected _Controller()
 		{
-			var task = Factory.GetDataContextAsync();
-			Task.Run(() => task);
+			var task = Task.Run(Factory.GetDataContextAsync);
 			task.Wait();
 
-			db = task.Result;
+			_db = task.Result;
 		}
 
 		// GET: odata/<name>
 		[EnableQuery]
 		public IQueryable<T> Get()
 		{
-			return db.Set<T>();
+			return _db.Set<T>();
 		}
 
 		// GET: odata/<name>(5)
 		[EnableQuery]
 		public SingleResult<T> Get([FromODataUri] Guid key)
 		{
-			return SingleResult.Create(db.Set<T>().Where(entity => entity.Id == key));
+			return SingleResult.Create(_db.Set<T>().Where(entity => entity.Id == key));
 		}
 
 		// PUT: odata/<name>(5)
@@ -47,7 +46,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 				return BadRequest(ModelState);
 			}
 
-			var entity = await db.Set<T>().FindAsync(key);
+			var entity = await _db.Set<T>().FindAsync(key);
 			if (entity == null)
 			{
 				return NotFound();
@@ -57,7 +56,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 
 			try
 			{
-				await db.SaveChangesAsync();
+				await _db.SaveChangesAsync();
 			}
 			catch (DbUpdateConcurrencyException)
 			{
@@ -77,7 +76,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 		// POST: odata/<name>
 		public async Task<IHttpActionResult> Post(T entity)
 		{
-			if (entity.Id == null || entity.Id == Guid.Empty)
+			if (entity.Id == Guid.Empty)
 			{
 				entity.Id = Guid.NewGuid();
 			}
@@ -87,11 +86,11 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 				return BadRequest(ModelState);
 			}
 
-			db.Set<T>().Add(entity);
+			_db.Set<T>().Add(entity);
 
 			try
 			{
-				await db.SaveChangesAsync();
+				await _db.SaveChangesAsync();
 			}
 			catch (DbUpdateException)
 			{
@@ -117,7 +116,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 				return BadRequest(ModelState);
 			}
 
-			var entity = await db.Set<T>().FindAsync(key);
+			var entity = await _db.Set<T>().FindAsync(key);
 			if (entity == null)
 			{
 				return NotFound();
@@ -127,7 +126,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 
 			try
 			{
-				await db.SaveChangesAsync();
+				await _db.SaveChangesAsync();
 			}
 			catch (DbUpdateConcurrencyException)
 			{
@@ -147,14 +146,14 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 		// DELETE: odata/<name>(5)
 		public async Task<IHttpActionResult> Delete([FromODataUri] Guid key)
 		{
-			var entity = await db.Set<T>().FindAsync(key);
+			var entity = await _db.Set<T>().FindAsync(key);
 			if (entity == null)
 			{
 				return NotFound();
 			}
 
-			db.Set<T>().Remove(entity);
-			await db.SaveChangesAsync();
+			_db.Set<T>().Remove(entity);
+			await _db.SaveChangesAsync();
 
 			return StatusCode(HttpStatusCode.NoContent);
 		}
@@ -163,14 +162,14 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 		{
 			if (disposing)
 			{
-				db.Dispose();
+				_db.Dispose();
 			}
 			base.Dispose(disposing);
 		}
 
 		private async Task<bool> IsEntityExistsAsync(Guid key)
 		{
-			return await db.Set<T>().AnyAsync(e => e.Id == key);
+			return await _db.Set<T>().AnyAsync(e => e.Id == key);
 		}
 	}
 }
