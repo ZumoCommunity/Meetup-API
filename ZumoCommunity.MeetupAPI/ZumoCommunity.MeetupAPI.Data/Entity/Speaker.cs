@@ -5,7 +5,10 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 	public class Speaker : _Data
 	{
 		[Required]
-		public string FullName { get; set; }
+		public string FirstName { get; set; }
+
+		[Required]
+		public string LastName { get; set; }
 
 		[Required]
 		public string Bio { get; set; }
@@ -25,5 +28,9 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		public string TwitterUrl { get; set; }
 
 		public string YouTubeUrl { get; set; }
+
+		public string MvpUrl { get; set; }
+
+		public string WebSiteUrl { get; set; }
 	}
 }

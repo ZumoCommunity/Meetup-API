@@ -59,9 +59,36 @@
     <Compile Include="Entity\Topic.cs" />
     <Compile Include="Entity\TopicAsset.cs" />
     <Compile Include="Entity\_Data.cs" />
+    <Compile Include="Enum\AssetType.cs" />
+    <Compile Include="Enum\LocationType.cs" />
+    <Compile Include="Enum\MeetupOwnershipType.cs" />
     <Compile Include="Migrations\201701141531030_Initialize.cs" />
     <Compile Include="Migrations\201701141531030_Initialize.Designer.cs">
       <DependentUpon>201701141531030_Initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702021025048_AssetType-Added.cs" />
+    <Compile Include="Migrations\201702021025048_AssetType-Added.Designer.cs">
+      <DependentUpon>201702021025048_AssetType-Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702091927135_Speaker-MoreInfoAdded.cs" />
+    <Compile Include="Migrations\201702091927135_Speaker-MoreInfoAdded.Designer.cs">
+      <DependentUpon>201702091927135_Speaker-MoreInfoAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702091928571_Registration-RequiredAdded.cs" />
+    <Compile Include="Migrations\201702091928571_Registration-RequiredAdded.Designer.cs">
+      <DependentUpon>201702091928571_Registration-RequiredAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702091930090_MeetupOwnershipType-Added.cs" />
+    <Compile Include="Migrations\201702091930090_MeetupOwnershipType-Added.Designer.cs">
+      <DependentUpon>201702091930090_MeetupOwnershipType-Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702091930437_Meetup-AttendanceFeeAdded.cs" />
+    <Compile Include="Migrations\201702091930437_Meetup-AttendanceFeeAdded.Designer.cs">
+      <DependentUpon>201702091930437_Meetup-AttendanceFeeAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702091931538_LocationType-Added.cs" />
+    <Compile Include="Migrations\201702091931538_LocationType-Added.Designer.cs">
+      <DependentUpon>201702091931538_LocationType-Added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +107,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701141531030_Initialize.resx">
       <DependentUpon>201701141531030_Initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702021025048_AssetType-Added.resx">
+      <DependentUpon>201702021025048_AssetType-Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091927135_Speaker-MoreInfoAdded.resx">
+      <DependentUpon>201702091927135_Speaker-MoreInfoAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091928571_Registration-RequiredAdded.resx">
+      <DependentUpon>201702091928571_Registration-RequiredAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091930090_MeetupOwnershipType-Added.resx">
+      <DependentUpon>201702091930090_MeetupOwnershipType-Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091930437_Meetup-AttendanceFeeAdded.resx">
+      <DependentUpon>201702091930437_Meetup-AttendanceFeeAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091931538_LocationType-Added.resx">
+      <DependentUpon>201702091931538_LocationType-Added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

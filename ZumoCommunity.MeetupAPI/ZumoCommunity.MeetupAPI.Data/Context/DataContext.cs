@@ -5,6 +5,11 @@ namespace ZumoCommunity.MeetupAPI.Data.Context
 {
 	public class DataContext : DbContext
 	{
+		public DataContext()
+			: base("Database")
+		{
+		}
+
 		public DataContext(string connectionString)
 			: base(connectionString)
 		{
