@@ -28,6 +28,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 
 			var dataContextTask = Task.Run(Factory.GetDataContextAsync);
+			dataContextTask.Wait();
 			dataContextTask.Result.Database.Initialize(false);
 		}
 
