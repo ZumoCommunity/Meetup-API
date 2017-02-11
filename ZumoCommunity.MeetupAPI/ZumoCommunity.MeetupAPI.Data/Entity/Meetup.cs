@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ZumoCommunity.MeetupAPI.Data.Enum;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
@@ -21,7 +22,16 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		[MaxLength(300)]
 		public string Uri { get; set; }
 
+		[Required]
 		public Guid LocationId { get; set; }
+
+		[Required]
+		public MeetupOwnershipType MeetupOwnershipType { get; set; }
+
+		public int? AttendanceFee { get; set; }
+
+		[MaxLength(10)]
+		public string AttendanceFeeCurency { get; set; }
 
 		#region Navigation
 

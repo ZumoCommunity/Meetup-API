@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ZumoCommunity.MeetupAPI.Data.Enum;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
@@ -20,6 +21,9 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 
 		[Required]
 		public double Longitude { get; set; }
+
+		[Required]
+		public LocationType LocationType { get; set; }
 
 		#region Navigation
 

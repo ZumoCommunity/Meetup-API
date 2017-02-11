@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZumoCommunity.MeetupAPI.API
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZumoCommunity.MeetupAPI.Data", "ZumoCommunity.MeetupAPI.Data\ZumoCommunity.MeetupAPI.Data.csproj", "{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}"
 EndProject
-Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ZumoCommunity.MeetupAPI.ResourceGroup", "ZumoCommunity.MeetupAPI.ResourceGroup\ZumoCommunity.MeetupAPI.ResourceGroup.deployproj", "{0AA195A9-D267-431F-8006-3C81BD1FECF9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BFE0E04-0610-4031-AC27-A9CF2167FB8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AA195A9-D267-431F-8006-3C81BD1FECF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

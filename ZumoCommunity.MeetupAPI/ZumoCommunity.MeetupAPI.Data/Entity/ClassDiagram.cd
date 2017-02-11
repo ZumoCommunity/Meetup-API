@@ -10,7 +10,9 @@
       <Property Name="Meetup" />
       <Property Name="Topic" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" />
+    <ShowAsCollectionAssociation>
+      <Property Name="Speakers" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Location" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="0.5" Width="1.75" />
@@ -18,45 +20,56 @@
       <HashCode>AAAAAAAAAEBAAEAAAAAIAAAAAAAAAAADAAAAAQAAAAA=</HashCode>
       <FileName>Entity\Location.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Meetup" BaseTypeListCollapsed="true">
-    <Position X="3.25" Y="3" Width="1.5" />
+    <Position X="3.25" Y="3" Width="2" />
     <TypeIdentifier>
-      <HashCode>AACIAAAAAAAAAkAQAAIAAAAAAAAQAAEACAAAABAAAAA=</HashCode>
+      <HashCode>AACIAIAAAAAAAkAQAAIAAAAAAAAQACEACAAIABAAAAA=</HashCode>
       <FileName>Entity\Meetup.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Location" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Partner" BaseTypeListCollapsed="true">
-    <Position X="10" Y="0.5" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Meetups" Type="ZumoCommunity.MeetupAPI.Data.Entity.Meetup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.094" Y="2.502" />
+        <Point X="7.094" Y="3.875" />
+        <Point X="5.25" Y="3.875" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAggAEAAABAAAAAAAAAAAAABAAAAAQAAAAA=</HashCode>
       <FileName>Entity\Partner.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <ShowAsCollectionAssociation>
+      <Property Name="Meetups" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Registraion" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.75" />
+  <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Registration" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Meetup" Type="ZumoCommunity.MeetupAPI.Data.Entity.Meetup" FixedToPoint="true">
+      <Path>
+        <Point X="4.417" Y="2.31" />
+        <Point X="4.417" Y="3" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>IAAAAAAAASAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entity\Registraion.cs</FileName>
+      <FileName>Entity\Registration.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Meetup" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Speaker" BaseTypeListCollapsed="true">
-    <Position X="7.75" Y="6" Width="1.5" />
+    <Position X="7.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAIAAyAABAAAgAAAAAAAAAAAAAAEAQAA=</HashCode>
+      <HashCode>AAAAAEAAACAAAAAAyBABAAAgAEAAAAAAAAAAAAEAQAg=</HashCode>
       <FileName>Entity\Speaker.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.Topic" BaseTypeListCollapsed="true">
     <Position X="10.75" Y="3.75" Width="1.5" />
@@ -64,18 +77,16 @@
       <HashCode>AAAAAAgAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Entity\Topic.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ZumoCommunity.MeetupAPI.Data.Entity.TopicAsset" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="3.75" Width="1.5" />
+    <Position X="10.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAEAAAAAAAAACAAAAAAAAAAAAACAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAQEAAAAAAAAACAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Entity\TopicAsset.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Topic" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

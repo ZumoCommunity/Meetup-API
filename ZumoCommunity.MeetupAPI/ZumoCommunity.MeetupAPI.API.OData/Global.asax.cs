@@ -17,10 +17,12 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 		{
 			ConfigurationProvider = new ConfigurationProvider();
 
+			var environmentReader = new EnvironmentVariablesReader();
 			var appSettingsReader = new AppSettingsReader();
 			var connectionStringsReader = new ConnectionStringsReader();
 
 			Task.WaitAll(
+				Task.Run(() => ConfigurationProvider.AddConfigurationReaderAsync(environmentReader)),
 				Task.Run(() => ConfigurationProvider.AddConfigurationReaderAsync(appSettingsReader)),
 				Task.Run(() => ConfigurationProvider.AddConfigurationReaderAsync(connectionStringsReader)));
 
@@ -28,6 +30,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 
 			var dataContextTask = Task.Run(Factory.GetDataContextAsync);
+			dataContextTask.Wait();
 			dataContextTask.Result.Database.Initialize(false);
 		}
 
