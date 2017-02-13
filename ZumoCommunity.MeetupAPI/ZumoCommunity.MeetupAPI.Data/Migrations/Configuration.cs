@@ -3,7 +3,7 @@ using ZumoCommunity.MeetupAPI.Data.Context;
 
 namespace ZumoCommunity.MeetupAPI.Data.Migrations
 {
-	internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
+	public sealed class Configuration : DbMigrationsConfiguration<DataContext>
 	{
 		public Configuration()
 		{

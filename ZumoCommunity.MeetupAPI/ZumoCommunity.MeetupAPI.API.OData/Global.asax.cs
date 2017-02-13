@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -6,6 +7,7 @@ using System.Web.Routing;
 using ZumoCommunity.ConfigurationAPI.Provider;
 using ZumoCommunity.ConfigurationAPI.Readers.Common;
 using ZumoCommunity.MeetupAPI.API.OData.Helpers;
+using ZumoCommunity.MeetupAPI.Data.Context;
 
 namespace ZumoCommunity.MeetupAPI.API.OData
 {
@@ -31,7 +33,10 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 
 			var dataContextTask = Task.Run(Factory.GetDataContextAsync);
 			dataContextTask.Wait();
-			dataContextTask.Result.Database.Initialize(false);
+
+			var database = dataContextTask.Result.Database;
+			Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Data.Migrations.Configuration>());
+			database.Initialize(false);
 		}
 
 		protected void Session_Start(object sender, EventArgs e)
