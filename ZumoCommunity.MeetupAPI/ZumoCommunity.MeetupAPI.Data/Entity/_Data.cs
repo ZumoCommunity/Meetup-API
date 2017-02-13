@@ -6,7 +6,6 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 	public abstract class _Data
 	{
 		[Key]
-		[Required]
 		public Guid Id { get; set; }
 
 		public virtual bool IsDataValid()

@@ -90,6 +90,10 @@
     <Compile Include="Migrations\201702091931538_LocationType-Added.Designer.cs">
       <DependentUpon>201702091931538_LocationType-Added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702131432099_TopicAsset-Adjusted.cs" />
+    <Compile Include="Migrations\201702131432099_TopicAsset-Adjusted.Designer.cs">
+      <DependentUpon>201702131432099_TopicAsset-Adjusted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702091931538_LocationType-Added.resx">
       <DependentUpon>201702091931538_LocationType-Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702131432099_TopicAsset-Adjusted.resx">
+      <DependentUpon>201702131432099_TopicAsset-Adjusted.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

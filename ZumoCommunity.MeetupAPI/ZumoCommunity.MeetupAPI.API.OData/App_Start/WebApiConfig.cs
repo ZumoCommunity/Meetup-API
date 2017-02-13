@@ -22,8 +22,8 @@ namespace ZumoCommunity.MeetupAPI.API.OData
 			builder.EntitySet<Partner>("Partners");
 			builder.EntitySet<Registration>("Registrations");
 			builder.EntitySet<Speaker>("Speakers");
-			builder.EntitySet<TopicAsset>("TopicAssets");
 			builder.EntitySet<Topic>("Topics");
+			builder.EntitySet<TopicAsset>("TopicAssets");
 
 			config.MapODataServiceRoute("odata", "odata/v1", builder.GetEdmModel());
 		}
