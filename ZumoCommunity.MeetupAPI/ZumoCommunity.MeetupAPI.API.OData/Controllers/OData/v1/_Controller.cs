@@ -26,20 +26,20 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 
 		// GET: odata/<name>
 		[EnableQuery]
-		public IQueryable<T> Get()
+		public virtual IQueryable<T> Get()
 		{
 			return _db.Set<T>();
 		}
 
 		// GET: odata/<name>(5)
 		[EnableQuery]
-		public SingleResult<T> Get([FromODataUri] Guid key)
+		public virtual SingleResult<T> Get([FromODataUri] Guid key)
 		{
 			return SingleResult.Create(_db.Set<T>().Where(entity => entity.Id == key));
 		}
 
 		// PUT: odata/<name>(5)
-		public async Task<IHttpActionResult> Put([FromODataUri] Guid key, Delta<T> patch)
+		public virtual async Task<IHttpActionResult> Put([FromODataUri] Guid key, Delta<T> patch)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -74,7 +74,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 		}
 
 		// POST: odata/<name>
-		public async Task<IHttpActionResult> Post(T entity)
+		public virtual async Task<IHttpActionResult> Post([FromBody]T entity)
 		{
 			if (entity.Id == Guid.Empty)
 			{
@@ -109,7 +109,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 
 		// PATCH: odata/<name>(5)
 		[AcceptVerbs("PATCH", "MERGE")]
-		public async Task<IHttpActionResult> Patch([FromODataUri] Guid key, Delta<T> patch)
+		public virtual async Task<IHttpActionResult> Patch([FromODataUri] Guid key, Delta<T> patch)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -144,7 +144,7 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Controllers.OData.v1
 		}
 
 		// DELETE: odata/<name>(5)
-		public async Task<IHttpActionResult> Delete([FromODataUri] Guid key)
+		public virtual async Task<IHttpActionResult> Delete([FromODataUri] Guid key)
 		{
 			var entity = await _db.Set<T>().FindAsync(key);
 			if (entity == null)

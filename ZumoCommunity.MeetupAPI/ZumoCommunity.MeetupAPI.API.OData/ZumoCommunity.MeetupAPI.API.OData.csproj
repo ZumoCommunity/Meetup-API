@@ -274,6 +274,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Authentication\AccessLevel.cs" />
+    <Compile Include="Authentication\AddChallengeOnUnauthorizedResult.cs" />
+    <Compile Include="Authentication\AuthenticationFailureResult.cs" />
+    <Compile Include="Authentication\HardcodedAuthentication.cs" />
     <Compile Include="Controllers\OData\v1\AgendaItemsController.cs" />
     <Compile Include="Controllers\OData\v1\PartnersController.cs" />
     <Compile Include="Controllers\OData\v1\LocationsController.cs" />

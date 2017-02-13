@@ -23,7 +23,14 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		public double Longitude { get; set; }
 
 		[Required]
-		public LocationType LocationType { get; set; }
+		public int LocationType { get; set; }
+
+		[NotMapped]
+		public LocationType LocationTypeCode
+		{
+			get { return (LocationType)LocationType; }
+			set { LocationType = (int)value; }
+		}
 
 		#region Navigation
 

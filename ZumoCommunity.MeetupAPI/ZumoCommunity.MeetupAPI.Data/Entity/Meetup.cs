@@ -26,7 +26,14 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		public Guid LocationId { get; set; }
 
 		[Required]
-		public MeetupOwnershipType MeetupOwnershipType { get; set; }
+		public int MeetupOwnershipType { get; set; }
+
+		[NotMapped]
+		public MeetupOwnershipType LocationTypeCode
+		{
+			get { return (MeetupOwnershipType)MeetupOwnershipType; }
+			set { MeetupOwnershipType = (int)value; }
+		}
 
 		public int? AttendanceFee { get; set; }
 
