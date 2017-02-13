@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ZumoCommunity.MeetupAPI.Data.Entity
 {
@@ -32,5 +35,14 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		public string MvpUrl { get; set; }
 
 		public string WebSiteUrl { get; set; }
+
+		#region Navigation
+
+		public virtual ICollection<AgendaItem> AgendaItems { get; set; }
+
+		#endregion
+
+		[NotMapped]
+		public IEnumerable<Guid> AgendaItemsIds { get; set; }
 	}
 }
