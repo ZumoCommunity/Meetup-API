@@ -4,7 +4,8 @@ namespace ZumoCommunity.MeetupAPI.Infrastructure.Configuration
 {
 	public enum ConfigurationKeys
 	{
-		Database
+		Database,
+		MasterApiKey
 	}
 
 	public static class ConfigurationKeysExtensions
@@ -15,6 +16,8 @@ namespace ZumoCommunity.MeetupAPI.Infrastructure.Configuration
 			{
 				case ConfigurationKeys.Database:
 					return "Database";
+				case ConfigurationKeys.MasterApiKey:
+					return "MasterApiKey";
 				default:
 					throw new NotImplementedException();
 			}
