@@ -13,6 +13,9 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		[Required]
 		public Guid TopicId { get; set; }
 
+		[Required]
+		public int OrderN { get; set; }
+
 		#region Navigation
 
 		public virtual Meetup Meetup { get; set; }
