@@ -102,6 +102,10 @@
     <Compile Include="Migrations\201702142142172_AgendaItem-OrderN.Designer.cs">
       <DependentUpon>201702142142172_AgendaItem-OrderN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702151930187_Meetup-Description.cs" />
+    <Compile Include="Migrations\201702151930187_Meetup-Description.Designer.cs">
+      <DependentUpon>201702151930187_Meetup-Description.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -146,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702142142172_AgendaItem-OrderN.resx">
       <DependentUpon>201702142142172_AgendaItem-OrderN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702151930187_Meetup-Description.resx">
+      <DependentUpon>201702151930187_Meetup-Description.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

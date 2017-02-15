@@ -40,6 +40,8 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		[MaxLength(10)]
 		public string AttendanceFeeCurency { get; set; }
 
+		public string Description { get; set; }
+
 		#region Navigation
 
 		[ForeignKey(nameof(LocationId))]
