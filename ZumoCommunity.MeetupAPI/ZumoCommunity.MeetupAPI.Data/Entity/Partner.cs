@@ -16,6 +16,9 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 
 		public string WebSiteUrl { get; set; }
 
+		[Required]
+		public bool IsFeatured { get; set; }
+
 		#region Navigation
 
 		public virtual ICollection<Meetup> Meetups { get; set; }
