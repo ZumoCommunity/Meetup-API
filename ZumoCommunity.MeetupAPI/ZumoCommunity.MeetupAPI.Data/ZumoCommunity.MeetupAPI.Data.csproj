@@ -102,6 +102,18 @@
     <Compile Include="Migrations\201702142142172_AgendaItem-OrderN.Designer.cs">
       <DependentUpon>201702142142172_AgendaItem-OrderN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702151930187_Meetup-Description.cs" />
+    <Compile Include="Migrations\201702151930187_Meetup-Description.Designer.cs">
+      <DependentUpon>201702151930187_Meetup-Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702152016419_Partner-IsFeatured.cs" />
+    <Compile Include="Migrations\201702152016419_Partner-IsFeatured.Designer.cs">
+      <DependentUpon>201702152016419_Partner-IsFeatured.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702211508000_Meetup-RegistrationUrl.cs" />
+    <Compile Include="Migrations\201702211508000_Meetup-RegistrationUrl.Designer.cs">
+      <DependentUpon>201702211508000_Meetup-RegistrationUrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -146,6 +158,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702142142172_AgendaItem-OrderN.resx">
       <DependentUpon>201702142142172_AgendaItem-OrderN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702151930187_Meetup-Description.resx">
+      <DependentUpon>201702151930187_Meetup-Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702152016419_Partner-IsFeatured.resx">
+      <DependentUpon>201702152016419_Partner-IsFeatured.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702211508000_Meetup-RegistrationUrl.resx">
+      <DependentUpon>201702211508000_Meetup-RegistrationUrl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,7 +29,7 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		public int MeetupOwnershipType { get; set; }
 
 		[NotMapped]
-		public MeetupOwnershipType LocationTypeCode
+		public MeetupOwnershipType MeetupOwnershipTypeCode
 		{
 			get { return (MeetupOwnershipType)MeetupOwnershipType; }
 			set { MeetupOwnershipType = (int)value; }
@@ -39,6 +39,10 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 
 		[MaxLength(10)]
 		public string AttendanceFeeCurency { get; set; }
+
+		public string Description { get; set; }
+
+		public string RegistrationUrl { get; set; }
 
 		#region Navigation
 
