@@ -29,7 +29,7 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 		public int MeetupOwnershipType { get; set; }
 
 		[NotMapped]
-		public MeetupOwnershipType LocationTypeCode
+		public MeetupOwnershipType MeetupOwnershipTypeCode
 		{
 			get { return (MeetupOwnershipType)MeetupOwnershipType; }
 			set { MeetupOwnershipType = (int)value; }
