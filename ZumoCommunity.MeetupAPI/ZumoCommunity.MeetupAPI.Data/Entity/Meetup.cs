@@ -42,6 +42,8 @@ namespace ZumoCommunity.MeetupAPI.Data.Entity
 
 		public string Description { get; set; }
 
+		public string RegistrationUrl { get; set; }
+
 		#region Navigation
 
 		[ForeignKey(nameof(LocationId))]
