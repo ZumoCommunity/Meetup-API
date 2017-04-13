@@ -9,12 +9,12 @@ using ZumoCommunity.MeetupAPI.Infrastructure.Configuration;
 
 namespace ZumoCommunity.MeetupAPI.API.OData.Authentication
 {
-	public class HardcodedAuthentication : Attribute, IAuthenticationFilter
+	public class MasterApiKeyAuthentication : Attribute, IAuthenticationFilter
 	{
 		public bool AllowMultiple => false;
 		protected AccessLevel AccessLevel { get; private set; }
 
-		public HardcodedAuthentication(AccessLevel accessLevel)
+		public MasterApiKeyAuthentication(AccessLevel accessLevel)
 		{
 			AccessLevel = accessLevel;
 		}

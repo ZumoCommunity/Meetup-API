@@ -277,7 +277,7 @@
     <Compile Include="Authentication\AccessLevel.cs" />
     <Compile Include="Authentication\AddChallengeOnUnauthorizedResult.cs" />
     <Compile Include="Authentication\AuthenticationFailureResult.cs" />
-    <Compile Include="Authentication\HardcodedAuthentication.cs" />
+    <Compile Include="Authentication\MasterApiKeyAuthentication.cs" />
     <Compile Include="Controllers\OData\v1\AgendaItemsController.cs" />
     <Compile Include="Controllers\OData\v1\PartnersController.cs" />
     <Compile Include="Controllers\OData\v1\LocationsController.cs" />
