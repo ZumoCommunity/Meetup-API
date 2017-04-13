@@ -31,5 +31,4 @@ namespace ZumoCommunity.MeetupAPI.API.OData.Authentication
 			return response;
 		}
 	}
-
 }
